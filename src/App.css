@@ -1,38 +1,124 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  box-shadow: none;
+  box-sizing: border-box;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.requestBody{
+  background-color: cornsilk;
+}
+
+.dog{
+  width: 300px;
+  height: 200px;
+  display: block;
+  margin-left: auto;  
+margin-right: auto;  
+border: 8px ;  
+padding: 5px; 
+}
+.dogs{
+  width: 600px;
+  height: 500px;
+  display: block;
+  margin-left: auto;  
+margin-right: auto;  
+border: 8px ;  
+padding: 5px; 
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cards{
+  box-shadow: var(--shadow);
+    transition: transform 0.2s linear;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cards:hover {
+  transform: translateY(-7px);
+}
+.sidebar-content{
+  padding-top: .25em;
+  height: 0;
+  overflow: hidden;
+}
+.about-item.open .sidebar-content {
+ 
+  height: auto;
+  overflow: hid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.about-title .toggle-btn{
+  transition: transform .3s;
+  cursor:pointer;
+}
+
+.about-title .toggle-btn{
+  transform: rotate(180deg);
+}
+
+.about-item{
+  display: block;
+ 
+  padding: .75 1em;
+}
+.about-title span i{
+  display: inline-block;
+  width: 1.5em;
+}
+.about-title{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+} 
+
+/* nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* nav a {
+ display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: firebrick;
+  border-bottom: 2px solid firebrick;
+  transition: 0.1s;
+} */ 
+
+/* nav a:hover,
+nav a:active {
+  color: tomato;
+  border-bottom: 2px solid tomato;
+} */
+
+#home,
+#about {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  padding: 1rem;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#about a {
+  display: block;
 }
